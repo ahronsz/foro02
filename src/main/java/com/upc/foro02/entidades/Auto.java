@@ -1,12 +1,13 @@
 package com.upc.foro02.entidades;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 public class Auto implements Serializable {
@@ -16,6 +17,7 @@ public class Auto implements Serializable {
     private String marca;
     private String modelo;
     private String color;
+    @NotNull
     private LocalDate fecha_fabricacion;
 
     public double getCosto() {
